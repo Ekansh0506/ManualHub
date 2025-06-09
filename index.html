@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Manual Hub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="glass">
+        <div class="container header-content">
+            <div class="logo">
+                <span>Manual</span><span class="accent">Hub</span>
+            </div>
+            <nav>
+                <a href="#" id="nav-about">About</a>
+                <a href="#" id="nav-manuals">Manuals</a>
+                <a href="#" id="nav-contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-bg"></div>
+        <div class="container hero-content">
+            <div class="search-bar glass">
+                <input type="text" placeholder="SEARCH FOR YOUR MANUAL">
+                <button><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <main class="container" id="main-content">
+        <section class="brands-grid">
+            <!-- Apple -->
+            <div class="brand-card animate-on-scroll">
+                <div class="brand-logo apple"></div>
+                <div class="brand-info">
+                    <h3>Apple</h3>
+                    <div class="brand-categories">
+                        <button data-brand="Apple" data-category="iPhone">iPhone</button>
+                        <button data-brand="Apple" data-category="Macbook">Macbook</button>
+                        <button data-brand="Apple" data-category="AirPods">AirPods</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Samsung -->
+            <div class="brand-card animate-on-scroll">
+                <div class="brand-logo samsung"></div>
+                <div class="brand-info">
+                    <h3>Samsung</h3>
+                    <div class="brand-categories">
+                        <button data-brand="Samsung" data-category="Mobiles">Mobiles</button>
+                        <button data-brand="Samsung" data-category="Appliances">Appliances</button>
+                        <button data-brand="Samsung" data-category="Watches">Watches</button>
+                    </div>
+                </div>
+            </div>
+            <!-- boAt -->
+            <div class="brand-card animate-on-scroll">
+                <div class="brand-logo boat"></div>
+                <div class="brand-info">
+                    <h3>boAt</h3>
+                    <div class="brand-categories">
+                        <button data-brand="boAt" data-category="Rockerz">Rockerz</button>
+                        <button data-brand="boAt" data-category="Nirvana">Nirvana</button>
+                        <button data-brand="boAt" data-category="Watches">Watches</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Xiaomi -->
+            <div class="brand-card animate-on-scroll">
+                <div class="brand-logo xiaomi"></div>
+                <div class="brand-info">
+                    <h3>Xiaomi</h3>
+                    <div class="brand-categories">
+                        <button data-brand="Xiaomi" data-category="Mobiles">Mobiles</button>
+                        <button data-brand="Xiaomi" data-category="Appliances">Appliances</button>
+                        <button data-brand="Xiaomi" data-category="Watches">Watches</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- About Overlay -->
+    <div class="overlay-page" id="about-page" aria-modal="true" role="dialog">
+        <div class="overlay-content">
+            <button class="close-btn" onclick="closeOverlay('about-page')"><i class="fas fa-times"></i></button>
+            <h1>About <span class="accent">ManualHub</span></h1>
+            <p><b>ManualHub</b> was created with one clear goal: to make your life simpler by giving you easy, instant
+                access to product manuals — no more digging through drawers, searching random websites, or holding onto
+                bulky paper booklets.</p>
+            <p>We’ve all been there: you buy a new appliance or gadget, throw away the packaging, and then, a few weeks
+                later, need the manual — whether it’s to troubleshoot, set something up properly, or understand a
+                specific feature. That’s where ManualHub steps in.</p>
+            <h2>What is ManualHub?</h2>
+            <p>ManualHub is a digital platform that helps you find, view, and download product manuals with ease.
+                Whether you’re at home, on the go, or helping a family member figure out how their new device works,
+                ManualHub puts essential information at your fingertips.</p>
+            <p>Simply search by product name, model number, or brand — or scan a QR code (where available) — and access
+                what you need within seconds.</p>
+            <h2>Why Choose ManualHub?</h2>
+            <ul class="features-list">
+                <li>🧠 <b>Smart & Easy Search</b><br><span>Forget typing complex queries into Google. Our intelligent
+                        search helps you quickly find the exact manual for your product.</span></li>
+                <li>📄 <b>No More Paper Clutter</b><br><span>Free up your space by ditching printed manuals. Everything
+                        is available digitally, anytime you need it.</span></li>
+                <li>📱 <b>Access Anywhere</b><br><span>On your phone, tablet, or computer — ManualHub works across
+                        devices, so you’re never more than a few taps away from the info you need.</span></li>
+                <li>💾 <b>View or Download</b><br><span>You can read manuals directly on our site or download them for
+                        offline use — perfect for remote areas, travel, or emergencies.</span></li>
+                <li>🔒 <b>Privacy-Focused</b><br><span>We don’t track your searches or ask for unnecessary information.
+                        Your manual hunt stays your business.</span></li>
+            </ul>
+            <h2>Who Is It For?</h2>
+            <p>ManualHub is made for everyday consumers — people like you who just want things to work. Whether you're
+                setting up a new smart TV, fixing a kitchen appliance, or helping your parents figure out their phone,
+                ManualHub saves time and frustration.</p>
+            <ul class="features-list">
+                <li>Families trying to organize home gadgets</li>
+                <li>Renters or homeowners managing multiple appliances</li>
+                <li>Students setting up shared living spaces</li>
+                <li>Elderly users needing quick, easy instructions</li>
+            </ul>
+            <h2>Our Vision</h2>
+            <p>We believe owning a product should be a hassle-free experience. Manuals are meant to help — not get lost,
+                buried, or ignored. At ManualHub, we’re on a mission to make product documentation simple, accessible,
+                and paperless for everyone.</p>
+            <h2>Join the Movement</h2>
+            <p>Thousands of users are already simplifying their lives with ManualHub. Whether you're a tech enthusiast,
+                a DIYer, or just someone tired of losing instruction booklets — we’re here for you.</p>
+            <div class="callout">🛠️ Your products. Your manuals. One scan away.</div>
+        </div>
+    </div>
+
+    <!-- Contact Overlay -->
+    <div class="overlay-page" id="contact-page" aria-modal="true" role="dialog">
+        <div class="overlay-content">
+            <button class="close-btn" onclick="closeOverlay('contact-page')"><i class="fas fa-times"></i></button>
+            <h1>Contact <span class="accent">Us</span></h1>
+            <p>We’re here to help! Whether you have questions, suggestions, feedback, or partnership inquiries, feel
+                free to reach out to us. At ManualHub, we value every message and aim to respond promptly.</p>
+            <h2>📬 General Inquiries</h2>
+            <ul>
+                <li>📧 Email: <a href="mailto:support@manualhub.co">support@manualhub.co</a></li>
+                <li>📞 Phone: <a href="tel:+917861970037">+91-7861970037</a></li>
+                <li>🕒 Hours: Monday to Friday, 10:00 AM – 6:00 PM IST</li>
+            </ul>
+            <h2>🤝 Business & Partnerships</h2>
+            <ul>
+                <li>📧 Business Email: <a href="mailto:partnerships@manualhub.co">partnerships@manualhub.co</a></li>
+            </ul>
+            <h2>🛠️ Technical Support</h2>
+            <ul>
+                <li>📧 Help Desk: <a href="mailto:help@manualhub.co">help@manualhub.co</a></li>
+                <li>💬 Live Chat: Available on our website, Mon–Fri, 10 AM – 6 PM IST</li>
+            </ul>
+            <h2>📍 Our Office</h2>
+            <ul>
+                <li>ManualHub Technologies</li>
+                <li>D-402, Digital Valley, Sector 75<br>Noida, Uttar Pradesh, India – 201301</li>
+            </ul>
+            <h2>💬 Follow Us</h2>
+            <div class="social-links">
+                <a href="#" title="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="#" title="Twitter"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Models Overlay (dynamic) -->
+    <div class="overlay-page" id="models-page" aria-modal="true" role="dialog">
+        <div class="overlay-content" id="models-content"></div>
+    </div>
+
+    <!-- Manuals Overlay (all manuals) -->
+    <div class="overlay-page" id="manuals-page" aria-modal="true" role="dialog">
+        <div class="overlay-content" id="manuals-content"></div>
+    </div>
+
+    <footer>
+        <div class="container footer-content">
+            <span>Manual Hub ©️ 2025</span>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
