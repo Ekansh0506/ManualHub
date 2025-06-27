@@ -1,3 +1,6 @@
+// Base URL for API
+const API_BASE_URL = 'https://manualhub-1.onrender.com';
+
 // Animate brand cards as they appear in viewport
 function revealOnScroll() {
     const elements = document.querySelectorAll('.animate-on-scroll');
@@ -108,7 +111,7 @@ async function openAllManualsOverlay() {
     openOverlay('manuals-page');
 
     try {
-        const res = await fetch('https://manualhub-1.onrender.com/manuals-all');
+        const res = await fetch(`${API_BASE_URL}/manuals-all`);
         const manuals = await res.json();
         const manualsDiv = document.getElementById('all-manuals-list');
         if (manuals.length === 0) {
@@ -117,10 +120,9 @@ async function openAllManualsOverlay() {
             manualsDiv.innerHTML = `<ul>${manuals.map(m =>
                 `<li>
                         <b>${m.brand}</b> &raquo; <b>${m.category}</b> &raquo; <b>${m.model}</b> : 
-                        <a href="https://manualhub-1.onrender.com${m.url}" target="_blank">${m.name}</a>
+                        <a href="${API_BASE_URL}${m.url}" target="_blank">${m.name}</a>
                     </li>`
-            ).join('')
-                }</ul>`;
+            ).join('')}</ul>`;
         }
     } catch (err) {
         document.getElementById('all-manuals-list').innerHTML = `<p style="color:red;">Error loading manuals.</p>`;
@@ -167,13 +169,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 const manualsDiv = document.getElementById('manuals-list');
                 manualsDiv.innerHTML = "Loading manuals...";
                 try {
-                    const res = await fetch(`https://manualhub-1.onrender.com/manuals/${encodeURIComponent(brand)}/${encodeURIComponent(category)}/${encodeURIComponent(model)}`);
+                    const res = await fetch(`${API_BASE_URL}/manuals/${encodeURIComponent(brand)}/${encodeURIComponent(category)}/${encodeURIComponent(model)}`);
                     const manuals = await res.json();
                     if (manuals.length === 0) {
                         manualsDiv.innerHTML = "<p>No manuals uploaded for this model.</p>";
                     } else {
                         manualsDiv.innerHTML = "<h3>Available Manuals:</h3><ul>" +
-                            manuals.map(m => `<li><a href="https://manualhub-1.onrender.com${m.url}" target="_blank">${m.name}</a></li>`).join('') +
+                            manuals.map(m => `<li><a href="${API_BASE_URL}${m.url}" target="_blank">${m.name}</a></li>`).join('') +
                             "</ul>";
                     }
                 } catch (err) {
