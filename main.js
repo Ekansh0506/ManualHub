@@ -1,5 +1,5 @@
-// Base URL for API
-const API_BASE_URL = 'https://manualhub-1.onrender.com';
+
+const API_BASE_URL = 'https://manualhub-1.onrender.com/';
 
 // Animate brand cards as they appear in viewport
 function revealOnScroll() {
